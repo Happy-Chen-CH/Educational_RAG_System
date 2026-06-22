@@ -85,6 +85,10 @@ dependencies = [
     "openai>=1.75.0",
     "ollama>=0.4.7",
 
+    # ========== Web 服务 ==========
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+
     # ========== 工具与通用库 ==========
     "tqdm>=4.67.0",
     "python-dotenv>=1.0.1",
