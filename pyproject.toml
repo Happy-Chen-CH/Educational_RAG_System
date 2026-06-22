@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Happy Chen", email = "chenhao030108@gmail.com"},
+    {name = "Happy Chen", email = "19867713117@163.com"},
 ]
 keywords = ["rag", "education", "question-answering", "llm", "milvus", "langchain"]
 classifiers = [
