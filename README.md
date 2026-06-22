@@ -91,7 +91,8 @@
 Educational_RAG_System/
 ├── main.py                    # 🔝 主入口：集成问答系统
 ├── config.ini.example         # 📋 配置文件模板（复制为 config.ini）
-├── requirements.txt           # 📦 Python 依赖
+├── pyproject.toml             # 📦 项目元数据与依赖声明 (uv)
+├── uv.lock                    # 🔒 锁定依赖版本 (可复现安装)
 ├── README.md                  # 📖 项目文档
 ├── .gitignore                 # 🔒 Git 忽略规则
 │
@@ -202,11 +203,29 @@ cd Educational_RAG_System_online_model
 
 ### 2. 安装依赖
 
+本项目使用 [uv](https://docs.astral.sh/uv/) 管理依赖，首次使用请先安装 uv：
+
 ```bash
-pip install -r requirements.txt
+# macOS / Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 或使用 pip 安装
+pip install uv
 ```
 
-> ⚠️ 依赖包含 PyTorch、Transformers 等大型框架，建议在虚拟环境中安装，约需 3–5 分钟。
+然后一键同步所有依赖：
+
+```bash
+uv sync
+```
+
+> ⚠️ 依赖包含 PyTorch、Transformers 等大型框架，约需 3–5 分钟。uv 自动创建隔离的虚拟环境 (`.venv/`)。
+
+运行系统：
+
+```bash
+uv run python main.py
+```
 
 ### 3. 配置服务
 

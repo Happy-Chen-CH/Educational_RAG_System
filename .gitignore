@@ -61,10 +61,13 @@ tmp_trainer/*
 # Jupyter notebook 检查点
 .ipynb_checkpoints/
 
-# pip 虚拟环境
+# ==================== Python 虚拟环境 ====================
 venv/
 env/
 .venv/
 
 # Conda 环境
 conda-env/
+
+# uv 包管理器
+.python-version
